@@ -35,7 +35,7 @@ public class Main {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+        //se indica el tipo de objetos que se can a deserializar (arraylist de Employee)
         Type type = new TypeToken<ArrayList<Employee>>() {
         }.getType();
         ArrayList<Employee> employees = gson.fromJson(jsonString, type);
@@ -44,7 +44,7 @@ public class Main {
         for (Employee employee : employees) {
             System.out.println(employee);
         }
-
+        //modificamos algunos datos de los empleados
         employees.get(0).setFirstName("María");
         employees.get(1).setLastName("López");
         employees.get(2).setFirstName("Pepito");
